@@ -6,12 +6,21 @@ from sentence_transformers import SentenceTransformer
 from pymongo import MongoClient
 import re
 
+from dotenv import load_dotenv
+import os
+
+# Load environment variables from .env file
+load_dotenv()
+
+# Access environment variables
+api_key = os.environ['API-KEY']
+
 app = Flask(__name__)
 CORS(app)
 
 client = OpenAI(
     # This is the default and can be omitted
-    api_key= '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',
+    api_key= api_key,
 )
 
 def query_embeddings_with_vector_search(query_text):
