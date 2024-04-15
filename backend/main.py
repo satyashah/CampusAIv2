@@ -8,10 +8,10 @@ import re
 
 app = Flask(__name__)
 CORS(app)
-
+#'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'
 client = OpenAI(
     # This is the default and can be omitted
-    api_key= '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',
+    api_key= '<api_key>',
 )
 
 def query_embeddings_with_vector_search(query_text):
