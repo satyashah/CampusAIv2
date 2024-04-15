@@ -1,0 +1,14 @@
+.message {
+    margin: 10px;
+    padding: 30px;
+}
+
+.message.user {
+    text-align: left;
+}
+
+.message.bot {
+    text-align: left;
+    border-radius: 10px;
+    background-color: #343541;
+}

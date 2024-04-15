@@ -1,0 +1,60 @@
+
+ 
+.App {
+  height: 100vh;
+  background-color: #1E1E1E; /*#1E1E1E;*/
+  display: flex;
+  flex-direction: column;
+}
+
+.red {
+  border: red 1px solid;
+}
+
+.blue {
+  border: blue 1px solid;
+}
+
+.green {
+  border: green 1px solid;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+.uppersection {
+    flex: 1;
+    overflow: auto;
+    color: white;
+    
+}
+.lowersection {
+  height: auto;
+  padding: 10px;
+}
+
+a {
+  color: white;
+  text-decoration: underline;
+}
+
+
+
+/* custom scrollbar */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #929798;
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #d6dee1;
+}

@@ -1,0 +1,46 @@
+.header {
+    position: sticky;
+    top: 0;
+    /* background-color: #343541;  */
+    z-index: 1;
+
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Optional: Aligns items vertically in the center */
+    padding: 5px 20px;
+    /* Optional: Adds some padding around the items */
+    font-family: 'Varela Round', sans-serif;
+    font-weight: 700;
+
+    /* background-color: #343541; */
+    border-bottom: #343541 1px solid;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.header img {
+    height: 30px;
+    /* Adjust the size as needed */
+    margin-right: 10px;
+    /* Optional: Adds some space between the logo and text */
+}
+
+.header .trash-icon {
+    cursor: pointer;
+    /* Changes the cursor to a pointer when hovering over the icon */
+}
+
+.trashIcon {
+    width: 100%;
+    max-width: 100%;
+    /* Ensure image does not exceed container width */
+    max-height: 100%;
+    /* Ensure image does not exceed container height */
+    cursor: pointer;
+}

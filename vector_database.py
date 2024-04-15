@@ -36,11 +36,11 @@ def query_embeddings_with_vector_search(query_text, collection, model):
     pipeline = [
         {
             "$vectorSearch": {
-                "index": "testingIndex", # The name of index to use for vector search
+                "index": "default", # The name of index to use for vector search
                 "path": "plot_embedding", # The field that contains the embeddings
                 "queryVector": query_embedding, # The query vector
                 "numCandidates": 100, # Number of candidates to retrieve
-                "limit": 3 # Limit the output to 3 results
+                "limit": 3, # Limit the output to 3 results
             }
         },
         {
@@ -53,7 +53,8 @@ def query_embeddings_with_vector_search(query_text, collection, model):
     print(f"Vector search completed in {total_time:.2f} seconds.")
     return results
 
-mongo_conn_string = "mongodb+srv://emenikeemail:Ninjaboy12345$@cluster0.wl4qsvv.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+# "mongodb+srv://emenikeemail:Ninjaboy12345$@cluster0.wl4qsvv.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+mongo_conn_string = "mongodb+srv://sshah132:Satya1234@cluster0.yeud864.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 client = MongoClient(mongo_conn_string)
 db = client.testing
 collection = db.samples
@@ -71,9 +72,10 @@ sample_texts = [
     "She is reading a book.",
     "The car is moving fast."
 ]
-add_random_texts_with_embeddings(collection, model, sample_texts)
-query_text = "A man is eating a piece of paper like square food."
+# add_random_texts_with_embeddings(collection, model, sample_texts)
+query_text = "A man is eating a piece of bagel."
 results = query_embeddings_with_vector_search(query_text, collection, model)
+print("Results:", results)
 for doc in results:  # Display results
     print(doc)
 

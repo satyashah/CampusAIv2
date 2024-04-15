@@ -10,7 +10,8 @@ class FreshiesSpider(scrapy.Spider):
     custom_settings = {
         'DEPTH_LIMIT': 1  # Set the depth limit here
     }
-
+    
+    num_repeats = 0
     page_num = 0
 
     def parse(self, response):
